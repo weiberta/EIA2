@@ -1,0 +1,110 @@
+* {
+    background-color: transparent;
+}
+
+h1, h2 {
+    color: #800707;
+    font-style: italic;
+    text-align: center;
+}
+
+a {
+    text-decoration: none;
+    color: #120c0c;
+    transition: color 0.3s ease;
+}
+
+header {
+    width: 100%
+}
+
+img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 60%;
+}
+
+a:hover {
+    color: #ff001e;
+}
+
+#banner {
+    max-width: 100%;
+}
+
+span {
+    float: right;
+    margin-right: 150px;
+    font-size: 20px;
+
+}
+
+.C {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+}
+
+
+.left {
+    float: left;
+    width: 0%;
+    padding: 15px;
+    margin-top: 7px;
+    text-align: center;
+
+}
+
+.right {
+    float: right;
+    width: 20%;
+    padding: 15px;
+    margin-top: 7px;
+    text-align: center;
+}
+
+.A {
+    border: thin solid black;
+    margin: 1em;
+}
+
+
+#main_left {
+    float: left;
+    width: 50%;
+    height: 100%;
+}
+
+
+
+
+@media only screen and (max-width: 620px) {
+    /* For mobile phones: */
+    .menu, .right, .asideright{
+        width: 100%;
+    }
+    #main_left{
+        display: none;
+    }
+
+}
+
+/* [SHOPPING LIST] */
+#shop-list {
+    max-width: 800px;
+    display: grid;
+    grid-template-columns: 85% 15%;
+    grid-gap: 3px;
+}
+#shop-list div {
+    background: #f2f2f2;
+    text-align: center;
+    padding: 10px;
+    display: grid;
+    grid-template-columns: 100% auto;
+    grid-template-rows: auto;
+}
+
+
