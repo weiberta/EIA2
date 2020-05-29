@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" content="width=device-width, initial-scale=1.0" name="viewport">
+    <link rel="stylesheet" type="text/css" href="style-main.css">
+    <script src="type.js" type="text/javascript"></script>
+    <title> K & K CORONAHILFE </title>
+</head>
+
+<body>
+<header>
+    <h1> K & K CORONAHILFE </h1>
+    <h2>Was auch immer Sie brauchen - WIR sind für Sie da !</h2>
+    <img src="header.png" alt="oh nein, ein Ladefehler!">
+
+    <div style="background-color:#8B0000;padding:7px;text-align:center;height:2em;width: 100%;"> </div>
+</header>
+
+
+<form>
+  <div id="form">
+
+     <h2>Bestellungen</h2>
+
+    <!-- Option, value=" ", price=" " -->
+    <fieldset>
+         <legend> Produkte </legend>
+
+
+
+        <input type="checkbox" name="Produkt" id="brot" value="Brot" price="2.50" einheit="Stück">
+        <label for="brot">Brot</label>
+
+        <input type="checkbox" name="Produkt" id="milch" value="Milch" price="0.80" einheit="Liter">
+        <label for="milch">Milch</label>
+
+        <input type="checkbox" name="Produkt" id="gemüse" value="Gemüse" price="5.00" einheit="Stück">
+        <label for="gemüse">Gemüse</label>
+
+        <input type="checkbox" name="Produkt" id="desinfektionsmittel" value="Desinfektionsmittel" price="10" einheit="Packung">
+        <label for="desinfektionsmittel">Desinfektionsmittel</label>
+
+        <input type="checkbox" name="Produkt" id="klopapier" value="Klopapier" price="5" einheit="Packung">
+        <label for="klopapier">Klopapier</label>
+
+
+
+
+
+        <!--  <select name="Produkt" id="add-item">
+            <option value="Brot" price="2.50">Brot</option>
+            <option value=" Milch" price="1.5">Milch </option>
+            <option value="Gemüse" price="3">Gemüse </option>
+            <option value="Desinfektionsmittel" price="5">Desinfektionsmittel </option>
+            <option value="Klopapier" price="5">Klopapier </option>
+
+         </select> -->
+     </fieldset>
+
+<!-- Radio, nur 1 Auswahl input type=" " name=" " id=" " ohne price/ select-->
+<fieldset>
+
+    <legend>Geschäfte</legend>
+    <input type="radio" name="Geschäft" id="edeka" value="Edeka"/>
+    <label for="edeka" >Edeka</label>
+
+    <input type="radio" name="Geschäft" id="lidl" value="Lidl"/>
+    <label for="lidl" >Lidl</label>
+
+    <input type="radio" name="Geschäft" id="aldi" value="Aldi"/>
+    <label for="aldi" >Aldi</label>
+
+    <input type="radio" name="Geschäft" id="rewe" value="Rewe"/>
+    <label for="rewe" >Rewe</label>
+
+</fieldset>
+
+
+
+    <!-- input type="checkbox" name=" ", id=" ", value=" ", price=" ", + label for=" " -->
+
+<fieldset>
+    <legend>Hausarbeiten</legend>
+
+    <input type="checkbox" name="Hausarbeiten" id="staubsaugen" value="Staubsaugen" price="10">
+    <label for="staubsaugen">Staubsaugen</label>
+
+    <input type="checkbox" name="Hausarbeiten" id="wischen" value="Wischen" price="8">
+    <label for="wischen">Wischen</label>
+
+    <input type="checkbox" name="Hausarbeiten" id="gießen" value="Gießen" price="3">
+    <label for="gießen">Blumen gießen</label>
+
+    <input type="checkbox" name="Hausarbeiten" id="post" value="Post" price="2">
+    <label for="post">Briefkasten leeren</label>
+
+</fieldset>
+
+ <!-- Slider mit abheben -->
+
+    <fieldset>
+         <legend>Bankautomat</legend>
+
+        <span id="slider">
+             Wie viel Geld möchten sie Ein- bzw. Auszahlen?
+             <span>
+             0 €
+              <input type="range" name="Amount" id="amount" min="1" max="200" step="5" value="5" price=" ">
+             200 €
+             </span>
+             <progress max="200" value="0"> </progress>
+          </span>
+
+        <fieldset>
+            <legend>Zahlungsmethode</legend>
+            <input type="radio" name="Zahlung" id="bar" value="Bar">
+            <label for="bar">Bar</label>
+            <input type="radio" name="Zahlung" id="bankeinzug" value="Bankeinzug">
+            <label for="bankeinzug">Bankeinzug</label>
+            <input type="radio" name="Zahlung" id="ueberweisung" value="Überweisung">
+            <label for="ueberweisung">Überweisung</label>
+        </fieldset>
+
+
+    </fieldset>
+
+
+
+    </div>
+</form>
+
+<!-- Bestellung -->
+
+<div>
+    <h2>Zusammenfassung</h2>
+    <div id="order">
+        ...
+    </div>
+    <button id="button">Bestätigen</button>
+</div>
+
+
+
+</body>
+</html>
