@@ -3,37 +3,40 @@ namespace Coronahilfe {
 
     function handleLoad(_event: Event): void {
         console.log("Start");
+
+        // GENERATECONTENT
+
+       generateContent(data);
+
+
+
         let form: HTMLDivElement = <HTMLDivElement>document.querySelector("div#form");
         let slider: HTMLInputElement = <HTMLInputElement>document.querySelector("input#amount");
         let button: HTMLButtonElement = <HTMLButtonElement>document.querySelector("#button");
 
+
+
         form.addEventListener("change", handleChange);
         slider.addEventListener("input", displayAmount);
         button.addEventListener("click", submitData);
+
     }
 
-    function submitData (_event: Event): void {
+    function submitData(_event: Event): void {
         alert("Deine Besellung wurde versendet");
         console.log("Bestellung versendet");
     }
 
     function handleChange(_event: Event): void {
 
-        // console.log(_event);
-        // let Produkt: HTMLSelectElement = <HTMLSelectElement>document.querySelector("select");
-        // console.log(Produkt.value);
-
-        // let inputs: NodeListOf<HTMLInputElement> = document.querySelectorAll("input");
-        // console.log(inputs);
-
         let order: HTMLDivElement = <HTMLDivElement>document.querySelector("div#order");
-        order.innerHTML= " ";
-
+        order.innerHTML = " ";
 
         let formData: FormData = new FormData(document.forms[0]);
-        // console.log(formData);
 
-        // Hier befindet sich ein Fehler, den ich nicht herausbekommen > hats repariert
+
+        // Hier befindet sich ein Fehler, den ich nicht herausbekommen
+        // type = NULL ??
         // for (let entry of formData.toString()) {
         // for (let entry of typeof formData) {
 
@@ -56,13 +59,14 @@ namespace Coronahilfe {
         progress.value = parseFloat(amount);
 
     }
+
+
+// DELETE ORDER BUTTON
+
+   //  function deleteOrder(_event: Event): void {
+  //      let order: HTMLDivElement = <HTMLDivElement>document.querySelector("div#order");
+   //     order.innerHTML = "";
+   //    console.log("Die Besellung wurde gelöscht.");
+   // }
+
 }
-
-
-// let formData: FormData = new FormData(document.forms[0]);
-// console.log(formData.get("Drink"));
-// for (let entry of formData) {
-//     console.log(entry);
-//     console.log("name: " + entry[0]);
-//     console.log("value: " + entry[1]);
-// }

@@ -4,6 +4,8 @@ var Coronahilfe;
     window.addEventListener("load", handleLoad);
     function handleLoad(_event) {
         console.log("Start");
+        // GENERATECONTENT
+        Coronahilfe.generateContent(Coronahilfe.data);
         let form = document.querySelector("div#form");
         let slider = document.querySelector("input#amount");
         let button = document.querySelector("#button");
@@ -16,16 +18,11 @@ var Coronahilfe;
         console.log("Bestellung versendet");
     }
     function handleChange(_event) {
-        // console.log(_event);
-        // let Produkt: HTMLSelectElement = <HTMLSelectElement>document.querySelector("select");
-        // console.log(Produkt.value);
-        // let inputs: NodeListOf<HTMLInputElement> = document.querySelectorAll("input");
-        // console.log(inputs);
         let order = document.querySelector("div#order");
         order.innerHTML = " ";
         let formData = new FormData(document.forms[0]);
-        // console.log(formData);
-        // Hier befindet sich ein Fehler, den ich nicht herausbekommen > hats repariert
+        // Hier befindet sich ein Fehler, den ich nicht herausbekommen
+        // type = NULL ??
         // for (let entry of formData.toString()) {
         // for (let entry of typeof formData) {
         for (let entry of formData) {
@@ -42,12 +39,11 @@ var Coronahilfe;
         let amount = _event.target.value;
         progress.value = parseFloat(amount);
     }
+    // DELETE ORDER BUTTON
+    //  function deleteOrder(_event: Event): void {
+    //      let order: HTMLDivElement = <HTMLDivElement>document.querySelector("div#order");
+    //     order.innerHTML = "";
+    //    console.log("Die Besellung wurde gelöscht.");
+    // }
 })(Coronahilfe || (Coronahilfe = {}));
-// let formData: FormData = new FormData(document.forms[0]);
-// console.log(formData.get("Drink"));
-// for (let entry of formData) {
-//     console.log(entry);
-//     console.log("name: " + entry[0]);
-//     console.log("value: " + entry[1]);
-// }
 //# sourceMappingURL=type.js.map

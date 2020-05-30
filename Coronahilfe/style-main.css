@@ -11,6 +11,12 @@ img {
     width: 60%;
 }
 
+#stinkecat {
+    float: left;
+    width: 70%;
+    height: 100%;
+}
+
 header {
     grid-column: span 2;
     text-align: center;
