@@ -2,7 +2,7 @@ namespace Coronahilfe {
     window.addEventListener("load", handleLoad);
     let form: HTMLFormElement;  //globaler kontext
     // let url: string = "HTML.html";
-    let url: string = "http://localhost:5001";
+    let url: string = "https://kisjasserver.herokuapp.com/";
 
 
     async function handleLoad(_event: Event): Promise<void> {
@@ -64,7 +64,7 @@ namespace Coronahilfe {
         let formData = new FormData(form);
         for (let entry of formData) {
 
-            let selector = "[" + entry[0] + "']";
+            let selector = "[value='" + entry[1] + "']";
            // console.log(entry[1]);
             let item = document.querySelector(selector);
             if (item == null)

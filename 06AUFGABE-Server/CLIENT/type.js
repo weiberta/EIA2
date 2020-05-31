@@ -4,7 +4,7 @@ var Coronahilfe;
     window.addEventListener("load", handleLoad);
     let form; //globaler kontext
     // let url: string = "HTML.html";
-    let url = "http://localhost:5001";
+    let url = "https://kisjasserver.herokuapp.com/";
     async function handleLoad(_event) {
         console.log("Start");
         let response = await fetch("Data.json");
@@ -54,7 +54,7 @@ var Coronahilfe;
             if (item == null)
                 continue;
             let itemPrice = Number(item.getAttribute("price"));
-            switch (entry[0]) {
+            switch (entry[1]) {
                 case "Produkte":
                     order.innerHTML += "<br>" + entry[0] + ":" + "<br>" + item.value + "<br>";
                     break;
@@ -73,12 +73,5 @@ var Coronahilfe;
         let amount = _event.target.value;
         progress.value = parseFloat(amount);
     }
-    // ---------- BUTTONS
-    // DELETE ORDER BUTTON
-    //  function deleteOrder(_event: Event): void {
-    //      let order: HTMLDivElement = <HTMLDivElement>document.querySelector("div#order");
-    //     order.innerHTML = "";
-    //    console.log("Die Besellung wurde gelöscht.");
-    // }
 })(Coronahilfe || (Coronahilfe = {}));
 //# sourceMappingURL=type.js.map

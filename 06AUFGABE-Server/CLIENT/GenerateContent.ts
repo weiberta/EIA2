@@ -35,7 +35,6 @@ namespace Coronahilfe {
                 case "Bankautomat":
                     group = createSelect(items, category);
                     break;
-
                 default:
                     break;
             }
