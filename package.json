@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "node AUFGABE-6/SERVER/NodeAPI.js"
+    "start": "node 06AUFGABE-Server/SERVER/NodeAPI.js"
   },
   "author": "Kisja",
   "license": "ISC"
