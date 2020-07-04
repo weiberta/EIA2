@@ -5,7 +5,9 @@ namespace L10Corona {
             super(_position);
             this.velocity.random(20, 50);
         }
-
+        
+        // Aussehen der Viren wurden von Nadine Klinkewitz übernommen !!!
+        
         draw(): void {
             c.save();
             c.translate(this.position.x, this.position.y);
